@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11761" systemVersion="16B2659" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vs" translatesAutoresizingMaskIntoConstraints="NO" id="3zL-LJ-dJO">
+                                <rect key="frame" x="63" y="302" width="151" height="33"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XQs-Or-5ph">
+                                <rect key="frame" x="298" y="42" width="54" height="128"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Score" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dbr-wZ-mub">
+                                <rect key="frame" x="297" y="434" width="54" height="128"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="d5J-OH-p1q">
+                                <rect key="frame" x="26" y="42" width="233" height="160"/>
+                                <subviews>
+                                    <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aKq-vx-3wP">
+                                        <rect key="frame" x="0.0" y="0.0" width="77.5" height="160"/>
+                                        <state key="normal" title="1" backgroundImage="back">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="P6e-wZ-9ds"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uz2-OL-iBK">
+                                        <rect key="frame" x="77.5" y="0.0" width="78" height="160"/>
+                                        <state key="normal" title="2" backgroundImage="back">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQh-35-55a"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Tj6-TY-pWw">
+                                        <rect key="frame" x="155.5" y="0.0" width="77.5" height="160"/>
+                                        <state key="normal" title="3" backgroundImage="back">
+                                            <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8hQ-oI-UZl"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="OMh-Wg-M9j">
+                                <rect key="frame" x="26" y="436" width="233" height="160"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="wy0-K8-ZVf">
+                                        <rect key="frame" x="0.0" y="0.0" width="233" height="160"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAN-VS-A21">
+                                                <rect key="frame" x="0.0" y="0.0" width="77.5" height="160"/>
+                                                <state key="normal" title="4" backgroundImage="back">
+                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izb-b4-NFK"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LPx-C1-pRQ">
+                                                <rect key="frame" x="77.5" y="0.0" width="78" height="160"/>
+                                                <state key="normal" title="5" backgroundImage="back">
+                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="WQW-SU-OSt"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rog-GE-0eW">
+                                                <rect key="frame" x="155.5" y="0.0" width="77.5" height="160"/>
+                                                <state key="normal" title="6" backgroundImage="back">
+                                                    <color key="titleColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                                </state>
+                                                <connections>
+                                                    <action selector="cardButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="t2P-su-4ix"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XQs-Or-5ph" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="282" id="0hX-F1-b2V"/>
+                            <constraint firstItem="d5J-OH-p1q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="3IO-i3-BBQ"/>
+                            <constraint firstItem="OMh-Wg-M9j" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="10" id="8lF-15-N8x"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="d5J-OH-p1q" secondAttribute="bottom" constant="465" id="BtZ-u0-1gO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="OMh-Wg-M9j" secondAttribute="trailing" constant="100" id="CCs-aC-Gcf"/>
+                            <constraint firstItem="d5J-OH-p1q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="HyR-gx-wsa"/>
+                            <constraint firstItem="3zL-LJ-dJO" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="47" id="JrK-jW-yya"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="OMh-Wg-M9j" secondAttribute="bottom" constant="71" id="LPL-u3-blO"/>
+                            <constraint firstItem="OMh-Wg-M9j" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="416" id="Lds-JY-x5q"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="3zL-LJ-dJO" secondAttribute="bottom" constant="332" id="Na7-Mu-kUL"/>
+                            <constraint firstItem="dbr-wZ-mub" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="414" id="Vfq-r3-Vir"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="3zL-LJ-dJO" secondAttribute="trailing" constant="145" id="XDa-8n-l8L"/>
+                            <constraint firstItem="3zL-LJ-dJO" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="282" id="b07-y2-gkM"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="dbr-wZ-mub" secondAttribute="bottom" constant="105" id="c4Y-NH-SVy"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="XQs-Or-5ph" secondAttribute="trailing" constant="7" id="i9Y-CJ-urk"/>
+                            <constraint firstItem="XQs-Or-5ph" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="22" id="iJj-fz-Rw3"/>
+                            <constraint firstItem="dbr-wZ-mub" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="281" id="ne1-W6-T8R"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="XQs-Or-5ph" secondAttribute="bottom" constant="497" id="nyr-em-f63"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="dbr-wZ-mub" secondAttribute="trailing" constant="8" id="u4V-qx-sQl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="d5J-OH-p1q" secondAttribute="trailing" constant="100" id="ubd-8f-izN"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="button1" destination="aKq-vx-3wP" id="lE1-CK-Z0Y"/>
+                        <outlet property="button2" destination="Uz2-OL-iBK" id="csB-in-lSS"/>
+                        <outlet property="button3" destination="Tj6-TY-pWw" id="WPY-kg-AhT"/>
+                        <outlet property="button4" destination="UAN-VS-A21" id="WIM-cJ-Tai"/>
+                        <outlet property="button5" destination="LPx-C1-pRQ" id="45M-ND-9mr"/>
+                        <outlet property="button6" destination="Rog-GE-0eW" id="Jo8-DV-r2b"/>
+                        <outlet property="firstScoreLabel" destination="XQs-Or-5ph" id="DCf-VG-vJF"/>
+                        <outlet property="secondScoreLabel" destination="dbr-wZ-mub" id="tHF-cn-TdU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="138.98050974512745"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="back" width="189" height="266"/>
+        <image name="vs" width="1302" height="1022"/>
+    </resources>
+</document>
