@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+  
     
     self.player1done=0;
     self.player2done=0;
@@ -32,6 +33,34 @@
     self.button5.tag=0;
     self.button6.tag=0;
     
+}
+-(void)viewDidAppear:(BOOL)animated
+{
+    UIAlertController *alert=[UIAlertController alertControllerWithTitle:@"Welcome!!!!!!!" message:@""preferredStyle:UIAlertControllerStyleAlert];
+    
+    
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        //textField.placeholder=@"Enter Player 1 Name:";
+        [textField setText:@"Player 1"];
+        self.player1NameText=textField;
+    }];
+    
+    [alert addTextFieldWithConfigurationHandler:^(UITextField * _Nonnull textField) {
+        //textField.placeholder=@"Enter Player 2 Name:";
+         [textField setText:@"Player 2"];
+        self.player2NameText=textField;
+    }];
+    
+    UIAlertAction *ok=[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        nil;
+    }];
+    
+    [alert addAction:ok];
+    [self presentViewController:alert animated:YES completion:^{
+        nil;
+    }];
+
 }
 -(void)reset
 {
@@ -73,6 +102,7 @@
             nil;
         [self viewDidLoad];
         [self reset];
+    
         }];
         
         [alert addAction:ok];
@@ -92,28 +122,28 @@
         NSInteger secondCardtag=self.button4.tag;
         if(firstCardtag==1)
         {
-            msg=@"Player 1 Winner";
+            msg=[self.player1NameText.text stringByAppendingString:@" Win"];
         }
         else if(secondCardtag==1)
         {
-            msg=@"Player 2 Winner";
+            msg=[self.player2NameText.text stringByAppendingString:@" Win"];
         }
         else if(firstCardtag > secondCardtag)
         {
-            msg=@"Player 1 Winner";
+            msg=[self.player1NameText.text stringByAppendingString:@" Win"];
         }
         else
         {
-            msg=@"Player 2 Winner";
+            msg=[self.player2NameText.text stringByAppendingString:@" Win"];
         }
     }
     else if (self.isTeenPatti)
     {
-        msg=@"Player 1 Winner";
+        msg=[self.player1NameText.text stringByAppendingString:@" Win"];
     }
     else if(self.isTeenPatti1)
     {
-        msg=@"Player 2 Winner";
+        msg=[self.player2NameText.text stringByAppendingString:@" Win"];
     }
     else if(self.isSequence && self.isSequence1)
     {
@@ -123,28 +153,28 @@
         
         if(firstplayer==6)
         {
-            msg=@"Player 1 Winner";
+            msg=[self.player1NameText.text stringByAppendingString:@" Win"];
         }
         else if(secondplayer==6)
         {
-            msg=@"Player 2 Winner";
+            msg=[self.player2NameText.text stringByAppendingString:@" Win"];
         }
         else if(firstplayer > secondplayer)
         {
-            msg=@"Player 1 Winner";
+            msg=[self.player1NameText.text stringByAppendingString:@" Win"];
         }
         else
         {
-            msg=@"Player 2 Winner";
+            msg=[self.player2NameText.text stringByAppendingString:@" Win"];
         }
     }
     else if (self.isSequence)
     {
-        msg=@"Player 1 Winner";
+        msg=[self.player1NameText.text stringByAppendingString:@" Win"];
     }
     else if (self.isSequence1)
     {
-        msg=@"Player 2 Winner";
+        msg=[self.player2NameText.text stringByAppendingString:@" Win"];
     }
     else
     {
@@ -182,11 +212,11 @@
         
         if(player1 >player2)
         {
-            msg=@"Player 1 Winner";
+            msg=[self.player1NameText.text stringByAppendingString:@" Win"];
         }
         else
         {
-            msg=@"Player 2 Winner";
+            msg=[self.player2NameText.text stringByAppendingString:@" Win"];
         }
         
     }
@@ -272,8 +302,7 @@
      //int isSequence=0,isTeenPatti=0,isSequence1=0,isTeenPatti1=0;
     //int player1done=0,player2done=0;
     
-    CGFloat height=button.frame.size.height;
-    NSLog(@"Height%lf",height);
+    //CGFloat height=button.frame.size.heiNSLog(@"Height%lf",height);
     int ran=rand() % self.max - self.min + self.min;
     NSLog(@"%d",ran);
     

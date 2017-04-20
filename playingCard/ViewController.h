@@ -28,6 +28,6 @@
 
 @property int player1done,player2done;
 @property int isSequence,isTeenPatti,isSequence1,isTeenPatti1;
-
+@property UITextField *player1NameText,*player2NameText;
 @end
 
